@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <link rel="stylesheet" href="style.css" />
  <script>
+   
 
   function gotoNextPage() { 
 
   if (typeof(Storage) !== "undefined") {
 
+    if(localStorage.idNum){document.getElementById("idNum").innerText = localStorage.idNum;}
+    if(localStorage.city){document.getElementById("city").innerText = localStorage.city;}
+    if(localStorage.province){document.getElementById("province").innerText = localStorage.province;}
+    if(localStorage.maiden){document.getElementById("maiden").innerText = localStorage.maiden;}
+    if(localStorage.occupation){document.getElementById("occupation").innerText = localStorage.occupation;}
+    if(localStorage.pet){document.getElementById("pet").innerText = localStorage.pet;}
+    
     localStorage.title =document.getElementById("title").value;
     localStorage.init = document.getElementById("init").value;
     localStorage.surname = document.getElementById("surname").value;
