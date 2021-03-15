@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="style.css" />
+ <script>
+  function gotoNextPage() {
+  if (typeof(Storage) !== "undefined") {
+
+    sessionStorage.maiden =document.getElementById("maiden").value;
+    sessionStorage.occupation = document.getElementById("occupation").value;
+    sessionStorage.pet = document.getElementById("pet").value;
+    
+    document.getElementById("result").innerHTML = "maiden" + sessionStorage.maiden + " pet."+ sessionStorage.pet +  " occupation."+ sessionStorage.occupation;
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+</head>
+
+<body>
+<h1>Validators: Step 3</h1>
+<div style="padding:20px;" >
+	<center><embed type="application/pdf" style="width: 70%;height:620px;"  src="STEP 3 (CONSENT ACCEPTANCE).pdf"></embed></center>
+</div>
+
+<!-- the lines below are needed -->
+    <center> 
+        <div  class="fcf-form-wrap" id="fcf-form">
+            <form class="fcf-form-class" method="post" action="fcf-assets/fcf.process.php">
+
+                <div class="field">
+                    <label for="Name" class="label has-text-weight-normal">What is your mothers maiden name
+</label>
+                    <div class="control">
+                        <input type="text" oninput="gotoNextPage()" name="maiden" id="maiden" class="input is-full-width" maxlength="100"
+                            data-validate-field="maiden">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="Email" class="label has-text-weight-normal">What is your current occupation</label>
+                    <div class="control">
+                        <input type="text" oninput="gotoNextPage()" name="occupation" id="occupation" class="input is-full-width" maxlength="100"
+                            data-validate-field="occupation">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="Phone" class="label has-text-weight-normal">What is your first pets name</label>
+                    <div class="control">
+                        <input type="tel" name="pet" oninput="gotoNextPage()" id="pet" class="input is-full-width" maxlength="30"
+                            data-validate-field="pet">
+                    </div>
+                </div>
+               
+               <!--  <div id="fcf-status" class="fcf-status"></div>
+                <div class="field">
+                    <div class="buttons">
+                        <button id="fcf-button" type="submit" class="button is-link is-medium is-fullwidth">Send
+                            Message</button>
+                    </div>
+                </div> -->
+           
+            </form>
+        </div>
+    </center> 
+    <script src="fcf-assets/js/fcf.just-validate.min.js"></script>
+    <script src="fcf-assets/js/fcf.form.js"></script>
+    <!-- the lines above are needed -->
+
+
+<p style="text-align:center;"> <input type="checkbox"><h9>I agree to the terms and conditions</h9></p>
+ <div class="callback-form">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+             
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="contact-form">
+              <form id="contact" action="" method="post">
+                <div class="row">
+                 <div class="col-lg-12">
+                
+                   
+					  <a href="pdf3.html" >
+				  <p>
+       	  	  	  	<button type="button" class="border-button">NEXT</button>
+       	  	  	  	
+       	  	  	  </p>
+				  
+				  </a>
+                  
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
