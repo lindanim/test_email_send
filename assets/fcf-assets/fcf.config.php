@@ -25,29 +25,6 @@ define('KEY', 'FREE');
 // *********************
 // FORM FIELD VALIDATION
 // *********************
-$rules = array(
-  "Name" => array(
-    "required" => true,
-    "label" => "Your name",
-    "maxLength" => 100
-  ),
-  "Email" => array(
-    "required" => true,
-    "label" => "Your email address",
-    "maxLength" => 100,
-    "email" => true
-  ),
-  "Phone" => array(
-    "required" => false,
-    "label" => "Your phone number",
-    "maxLength" => 30
-  ),
-  "Message" => array(
-    "required" => true,
-    "label" => "Your message",
-    "maxLength" => 3000
-  )
-);
 
 
 // ******************
