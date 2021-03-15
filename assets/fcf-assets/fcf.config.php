@@ -25,6 +25,60 @@ define('KEY', 'FREE');
 // *********************
 // FORM FIELD VALIDATION
 // *********************
+$rules = array(
+  "title" => array(
+    "required" => true,
+    "label" => "Title",
+    "maxLength" => 100
+  ),
+  "init" => array(
+    "required" => true,
+    "label" => "Initials",
+    "maxLength" => 100,
+     "maxLength" => 10
+  ),
+  "surname" => array(
+    "required" => false,
+    "label" => "Surname",
+    "maxLength" => 30
+  ),
+  "cellphone" => array(
+    "required" => true,
+    "label" => "Cellphone Number",
+    "maxLength" => 300
+  ),
+  "idNum" => array(
+    "required" => true,
+    "label" => "South African ID Number",
+    "maxLength" => 13
+  ) ,
+  "city" => array(
+    "required" => true,
+    "label" => "City",
+    "maxLength" => 100
+  ) ,
+  "province" => array(
+    "required" => true,
+    "label" => "Province",
+    "maxLength" => 100
+  ),
+  "maiden" => array(
+    "required" => true,
+    "label" => "What is your mothers maiden name",
+    "maxLength" => 100
+  ),
+  "occupation" => array(
+    "required" => true,
+    "label" => "What is your current occupation",
+    "maxLength" => 100
+  ),
+  "pet" => array(
+    "required" => true,
+    "label" => "What is your first pets name",
+    "maxLength" => 100
+  )
+);
+
 
 
 // ******************
