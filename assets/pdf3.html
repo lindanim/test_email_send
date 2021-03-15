@@ -11,19 +11,20 @@
 
   if (typeof(Storage) !== "undefined") {
 
-    if(localStorage.idNum){document.getElementById("idNum").innerText = localStorage.idNum;}
-    if(localStorage.city){document.getElementById("city").innerText = localStorage.city;}
-    if(localStorage.province){document.getElementById("province").innerText = localStorage.province;}
-    if(localStorage.maiden){document.getElementById("maiden").innerText = localStorage.maiden;}
-    if(localStorage.occupation){document.getElementById("occupation").innerText = localStorage.occupation;}
-    if(localStorage.pet){document.getElementById("pet").innerText = localStorage.pet;}
-    
+    if(localStorage.idNum){document.getElementById("idNum").value = localStorage.idNum;}
+    if(localStorage.city){document.getElementById("city").value = localStorage.city;}
+    if(localStorage.province){document.getElementById("province").value = localStorage.province;}
+    if(localStorage.maiden){document.getElementById("maiden").value = localStorage.maiden;}
+    if(localStorage.occupation){document.getElementById("occupation").value = localStorage.occupation;}
+    if(localStorage.pet){document.getElementById("pet").value = localStorage.pet;}
+
     localStorage.title =document.getElementById("title").value;
     localStorage.init = document.getElementById("init").value;
     localStorage.surname = document.getElementById("surname").value;
     localStorage.cellphone = document.getElementById("cellphone").value;
 
-    document.getElementById("result").innerHTML = " init."+ localStorage.init +  " surname."+ localStorage.surname +"IdNum" + localStorage.idNum + " prov."+ localStorage.province +  " pet."+ localStorage.pet+ "cellphone" + localStorage.cellphone + " title."+ localStorage.title +" "+ document.getElementById("maiden").value ;
+    document.getElementById("result").innerHTML = " init."+ localStorage.init +  " surname."+ localStorage.surname +"IdNum" + localStorage.idNum + " idNum."+ localStorage.idNum +  " city."+ localStorage.city+ "maiden" + localStorage.maiden + " occupation."+ localStorage.occupation +" "+ 
+    + " prov."+ localStorage.province +  " pet."+ localStorage.pet+ "cellphone" + localStorage.cellphone + " title."+ localStorage.title +" "+ document.getElementById("maiden").value ;
   } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
   }
