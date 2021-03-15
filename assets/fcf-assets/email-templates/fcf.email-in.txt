@@ -1,12 +1,7 @@
 New message from website form is below.
     
     
-ID Number: {idNum}
-City: {city}
-Province: {province}
-maiden: {maiden}
-occupation: {occupation}
-pet: {pet}
+
 title: {title}
 init: {init}
 surname: {surname}
