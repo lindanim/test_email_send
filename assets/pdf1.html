@@ -7,10 +7,10 @@
 <script>
   function gotoNextPage() {
   if (typeof(Storage) !== "undefined") {
-    sessionStorage.idNum =document.getElementById("idNum").value;
-    sessionStorage.city = document.getElementById("city").value;
-    sessionStorage.province = document.getElementById("province").value;
-    document.getElementById("result").innerHTML = " ID Num " + sessionStorage.idNum + " City. "+ sessionStorage.city +  " province. "+ sessionStorage.province;
+    localStorage.idNum =document.getElementById("idNum").value;
+    localStorage.city = document.getElementById("city").value;
+    localStorage.province = document.getElementById("province").value;
+    document.getElementById("result").innerHTML = " ID Num " + localStorage.idNum + " City. "+ localStorage.city +  " province. "+ localStorage.province;
         Session.Timeout=20
 
   } else {

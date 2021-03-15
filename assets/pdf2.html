@@ -8,11 +8,11 @@
   function gotoNextPage() {
   if (typeof(Storage) !== "undefined") {
 
-    sessionStorage.maiden =document.getElementById("maiden").value;
-    sessionStorage.occupation = document.getElementById("occupation").value;
-    sessionStorage.pet = document.getElementById("pet").value;
+    localStorage.maiden =document.getElementById("maiden").value;
+    localStorage.occupation = document.getElementById("occupation").value;
+    localStorage.pet = document.getElementById("pet").value;
     
-    document.getElementById("result").innerHTML = "maiden" + sessionStorage.maiden + " pet."+ sessionStorage.pet +  " occupation."+ sessionStorage.occupation;
+    document.getElementById("result").innerHTML = "maiden" + localStorage.maiden + " pet."+ localStorage.pet +  " occupation."+ localStorage.occupation;
   } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
   }

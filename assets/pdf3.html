@@ -5,23 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <link rel="stylesheet" href="style.css" />
  <script>
-    document.getElementById("idNum").innerText = sessionStorage.idNum;
-    document.getElementById("city").innerText = sessionStorage.city;
-    document.getElementById("province").innerText = sessionStorage.province;
-    document.getElementById("maiden").innerText = sessionStorage.maiden;
-    document.getElementById("occupation").innerText = sessionStorage.occupation;
-    document.getElementById("pet").innerText = sessionStorage.pet;
 
   function gotoNextPage() { 
 
   if (typeof(Storage) !== "undefined") {
 
-    sessionStorage.title =document.getElementById("title").value;
-    sessionStorage.init = document.getElementById("init").value;
-    sessionStorage.surname = document.getElementById("surname").value;
-    sessionStorage.cellphone = document.getElementById("cellphone").value;
+    localStorage.title =document.getElementById("title").value;
+    localStorage.init = document.getElementById("init").value;
+    localStorage.surname = document.getElementById("surname").value;
+    localStorage.cellphone = document.getElementById("cellphone").value;
 
-    document.getElementById("result").innerHTML = " init."+ sessionStorage.init +  " surname."+ sessionStorage.surname +"IdNum" + sessionStorage.idNum + " prov."+ essionStorage.province +  " pet."+ sessionStorage.pet+ "cellphone" + sessionStorage.cellphone + " title."+ essionStorage.title +" "+ document.getElementById("maiden").value ;
+    document.getElementById("result").innerHTML = " init."+ localStorage.init +  " surname."+ localStorage.surname +"IdNum" + localStorage.idNum + " prov."+ localStorage.province +  " pet."+ localStorage.pet+ "cellphone" + localStorage.cellphone + " title."+ localStorage.title +" "+ document.getElementById("maiden").value ;
   } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
   }
